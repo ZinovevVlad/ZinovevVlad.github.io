@@ -1,0 +1,13 @@
+@startuml
+actor "Кассир" as C
+boundary "Приложение" as app
+entity "Данные" as data
+actor "Администратор" as A
+
+C -> app : Заказ
+app -> C : Чек
+app -> data : Запрос
+data -> app : Ответ
+A -> app : Меню
+app -> A : Данные по продажам
+@enduml
